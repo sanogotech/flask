@@ -7,23 +7,34 @@ Python  Web  Flask
 https://flask.palletsprojects.com/en/1.1.x/quickstart/
 username = request.form['username']
 password = request.form['password']
+
+*************  home.html ************
+```
+<form action="/hello">
+  <label for="nom">Nom :</label><br>
+  <input type="text" id="nom" name="nom"><br>
+   <input type="submit" value="Submit">
+</form>
+```
+
 *************  hello.py ************
 ```
 from flask import render_template
 
 @app.route('/hello/')
-@app.route('/hello/<name>')
+@app.route('/hello/<nom>')
 def hello(name=None):
-    return render_template('hello.html', name=name)
+    return render_template('hello.html', nom=nom)
   ```
   ******  hello.html ******
   ```
   <!doctype html>
 <title>Hello from Flask</title>
-{% if name %}
-  <h1>Hello {{ name }}!</h1>
+
+{% if nom %}
+  <h1>Bonjour  {{ nom }}!</h1>
 {% else %}
-  <h1>Hello, World!</h1>
+  <h1>Bonjour, Abidjan !</h1>
 {% endif %}
 ```
 # Form
