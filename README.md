@@ -7,7 +7,7 @@ Python  Web  Flask
 https://flask.palletsprojects.com/en/1.1.x/quickstart/
 username = request.form['username']
 password = request.form['password']
-*************************
+*************  hello.py ************
 ```
 from flask import render_template
 
@@ -16,7 +16,7 @@ from flask import render_template
 def hello(name=None):
     return render_template('hello.html', name=name)
   ```
-  ************
+  ******  hello.html ******
   ```
   <!doctype html>
 <title>Hello from Flask</title>
