@@ -10,17 +10,16 @@ password = request.form['password']
 
 *************  home.html ************
 ```
+<!doctype html>
 <form action="/hello">
   <label for="nom">Nom :</label><br>
   <input type="text" id="nom" name="nom"><br>
    <input type="submit" value="Submit">
 </form>
 ```
-
 *************  hello.py ************
 ```
 from flask import render_template
-
 @app.route('/hello/')
 @app.route('/hello/<nom>')
 def hello(name=None):
@@ -30,7 +29,6 @@ def hello(name=None):
   ```
   <!doctype html>
 <title>Hello from Flask</title>
-
 {% if nom %}
   <h1>Bonjour  {{ nom }}!</h1>
 {% else %}
