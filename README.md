@@ -8,14 +8,16 @@ https://flask.palletsprojects.com/en/1.1.x/quickstart/
 username = request.form['username']
 password = request.form['password']
 *************************
+```
 from flask import render_template
 
 @app.route('/hello/')
 @app.route('/hello/<name>')
 def hello(name=None):
     return render_template('hello.html', name=name)
-  
+  ```
   ************
+  ```
   <!doctype html>
 <title>Hello from Flask</title>
 {% if name %}
@@ -23,7 +25,7 @@ def hello(name=None):
 {% else %}
   <h1>Hello, World!</h1>
 {% endif %}
-
+```
 # Form
 
 ## Flash Message
