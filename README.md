@@ -7,12 +7,6 @@ Python  Web  Flask
 https://flask.palletsprojects.com/en/1.1.x/quickstart/
 https://scotch.io/bar-talk/processing-incoming-request-data-in-flask
 
-@app.route('/form-example', methods=['GET', 'POST']) #allow both GET and POST requests
-def form_example():
-    if request.method == 'POST':  #this block is only entered when the form is submitted
-        language = request.form.get('language')
-        framework = request.form['framework']
-
 *************  home.html ************
 ```
 <!doctype html>
@@ -36,6 +30,14 @@ def hello(name=None):
     nom =  request.args.get('nom')   #if key doesn't exist, returns None
     return render_template('hello.html', nom=nom)
   ```
+ 
+```
+@app.route('/form-example', methods=['GET', 'POST']) #allow both GET and POST requests
+def form_example():
+    if request.method == 'POST':  #this block is only entered when the form is submitted
+        language = request.form.get('language')
+        framework = request.form['framework']
+```
   ******  hello.html ******
   ```
   <!doctype html>
