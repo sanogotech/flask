@@ -4,7 +4,7 @@ Python  Web  Flask
 ## MVC
 
 ##  Request
-<<<<<<< HEAD
+
  * https://flask.palletsprojects.com/en/1.1.x/quickstart/
 
 username = request.form['username']
@@ -12,9 +12,10 @@ password = request.form['password']
 *************************
 from flask import render_template
 =======
-https://flask.palletsprojects.com/en/1.1.x/quickstart/
-https://scotch.io/bar-talk/processing-incoming-request-data-in-flask
->>>>>>> c5c9f16b08432023db41c5ec7bf11c31442bece1
+- https://flask.palletsprojects.com/en/1.1.x/quickstart/
+
+- https://scotch.io/bar-talk/processing-incoming-request-data-in-flask
+
 
 *************  home.html ************
 ```
