@@ -4,7 +4,8 @@ Python  Web  Flask
 ## MVC
 
 ##  Request
-https://flask.palletsprojects.com/en/1.1.x/quickstart/
+ * https://flask.palletsprojects.com/en/1.1.x/quickstart/
+
 username = request.form['username']
 password = request.form['password']
 *************************
@@ -34,8 +35,10 @@ flash(u'Profile successfully created')
 ## Session
 
 ## OpenID
-https://pythonhosted.org/Flask-OpenID/
-https://github.com/sanogotech/flask-openid
+
+- https://pythonhosted.org/Flask-OpenID/
+
+- https://github.com/sanogotech/flask-openid
 
 ## ORM / SQLAlchemy
 
