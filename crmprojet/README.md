@@ -28,7 +28,8 @@ pipenv install gunicorn
 
 ## Web Doc  
 https://prettyprinted.com/tutorials/automatically_load_environment_variables_in_flask
-
+https://flask.palletsprojects.com/en/1.0.x/config/#configuring-from-files
+https://docs.python.org/3/library/configparser.html
 https://realpython.com/flask-by-example-part-1-project-setup/
 
 ##  Code Sample

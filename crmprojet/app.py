@@ -2,13 +2,23 @@ import os
 from flask import Flask, flash, render_template, request, redirect
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
+import configparser
 
 app = Flask(__name__)
-app.config.from_object(os.environ['APP_SETTINGS'])
-print(os.environ['APP_SETTINGS'])
+## Get Application  Settings
+config = configparser.ConfigParser()
+config.read('config.ini')
+urldbconfigvalue = config['DEFAULT']['SQLALCHEMY_DATABASE_URI']
+print("-----* DataBase Url is : ", urldbconfigvalue)
+# If you do that, your browser will not cache static assets that are served by Flask .No Cache Browser
+sendfilemaxageconfigvalue = config['DEFAULT']['SEND_FILE_MAX_AGE_DEFAULT']
+#The secret key is needed to keep the client-side sessions secure. You can generate some random
+secretkeyconfigvalue = config['DEFAULT']['SECRET_KEY']
 
-#app.secret_key = 'asrtarstaursdlarsn'
-#app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///posts.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = urldbconfigvalue
+app.config['SEND_FILE_MAX_AGE_DEFAULT'] = int(sendfilemaxageconfigvalue)
+app.config['SECRET_KEY'] = secretkeyconfigvalue
+
 db = SQLAlchemy(app)
 
 class BlogPost(db.Model):
@@ -95,6 +105,8 @@ def new_post():
         return render_template('new_post.html')
 
 if __name__ == "__main__":
+    config = configparser.ConfigParser()
+    
     app.run()
     #app.run(debug=True,host='0.0.0.0', port=8080)
     # If you are talking about test/dev environments, then just use the debug option.

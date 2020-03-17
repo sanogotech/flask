@@ -74,6 +74,7 @@ flash(u'Profile successfully created')
 - https://github.com/sanogotech/flask-openid
 
 ## ORM / SQLAlchemy
+https://hackersandslackers.com/flask-sqlalchemy-database-models/
 
 ## Cache
 
