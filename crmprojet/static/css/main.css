@@ -11,7 +11,7 @@ Le jumbotron est un composant de Bootstrap.
 
 .jumbotron {
  margin-bottom: 0px;
- height: 300px;
+ height: 500px;
  /*color: white;*/ /* Le texte sera affiché en blanc */
  /*text-shadow: black 0.3em 0.3em 0.3em;*/
  /*background:transparent;*/

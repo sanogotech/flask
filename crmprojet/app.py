@@ -1,10 +1,14 @@
+import os
 from flask import Flask, flash, render_template, request, redirect
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
 
 app = Flask(__name__)
-app.secret_key = 'asrtarstaursdlarsn'
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///posts.db'
+app.config.from_object(os.environ['APP_SETTINGS'])
+print(os.environ['APP_SETTINGS'])
+
+#app.secret_key = 'asrtarstaursdlarsn'
+#app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///posts.db'
 db = SQLAlchemy(app)
 
 class BlogPost(db.Model):
@@ -93,3 +97,5 @@ def new_post():
 if __name__ == "__main__":
     app.run()
     #app.run(debug=True,host='0.0.0.0', port=8080)
+    # If you are talking about test/dev environments, then just use the debug option.
+    # It will auto-reload the flask app when a code change happens.
