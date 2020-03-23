@@ -105,8 +105,8 @@ def new_post():
         return render_template('new_post.html')
 
 if __name__ == "__main__":
-    config = configparser.ConfigParser()
     
+    db.create_all()
     app.run()
     #app.run(debug=True,host='0.0.0.0', port=8080)
     # If you are talking about test/dev environments, then just use the debug option.

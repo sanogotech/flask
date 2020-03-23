@@ -16,6 +16,8 @@ from flask import render_template
 
 - https://scotch.io/bar-talk/processing-incoming-request-data-in-flask
 
+https://www.geeksforgeeks.org/python-introduction-to-web-development-using-flask/  ++
+
 
 *************  home.html ************
 ```
@@ -62,6 +64,21 @@ def form_example():
 
 ## Flash Message
 flash(u'Profile successfully created')
+
+## Maven /Poetry 
+https://www.anybox.fr/blog/creer-et-deployer-un-package-python/
+https://hackersandslackers.com/python-poetry-package-manager/
+
+curl -sSL https://raw.githubusercontent.com/sdispater/poetry/master/get-poetry.py | python
+poetry new mypoetrysample
+poetry add flask
+** la bibliothèque BeautilfulSoup permet de naviger dans une page HTML
+poetry  add bs4
+----
+add :  jobs.py
+poetry run scriptname 
+poetry build
+
 
 ## Template /Jinja
 
