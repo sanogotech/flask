@@ -1,12 +1,12 @@
 # Flask in Action
 
-##  Installing  Flask
+## 1. Installing  Flask
 
 ```
 pip install Flask
 ```
 
-## Flask hello world app
+## 2. Flask hello world app
 
 Create a file called hello.py
 
@@ -29,6 +29,8 @@ $ python hello.py
 ```
 
 Open http://localhost:5000/ in your webbrowser, and “Hello World!” should appear
+
+## 3. Render Template Page (Next Step)
 
 
 
