@@ -2,15 +2,15 @@
 
 ##  Installing  Flask
 
-'''
+```
 pip install Flask
-'''
+```
 
 ## Flask hello world app
 
 Create a file called hello.py
 
-'''python
+```python
 
 from flask import Flask
 app = Flask(__name__)
@@ -21,7 +21,7 @@ app = Flask(__name__)
 
 if __name__ == "__main__":
     app.run()
+```
 
 
-'''
 
